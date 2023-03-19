@@ -8,7 +8,7 @@ public class ObjectStorage {
     public static User currentUser;
 
     static {
-        users.add(new User("login", "password", "Fred", CardHolder.cardHolder.get(0)));
+        users.add(new User("login", "password", "Fred"));
     }
     static {
         products.add(new Product(450, "Филадельфия", "filadelfia.jpeg"));
