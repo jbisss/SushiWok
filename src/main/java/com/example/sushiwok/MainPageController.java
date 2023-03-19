@@ -44,10 +44,17 @@ public class MainPageController {
         }
         for(Product product:ObjectStorage.products){
             product.getButtonDelete().setOnAction(actionEvent -> {
-                product.setAmount(0);
-                vBoxBucket.getChildren().remove(product.getVBox());
-                Bucket.bucketProducts.remove(product.getRemovableProduct());
-                finishCostField.setText(String.valueOf(Bucket.countBucket()));
+                if(product.getAmount() == 1){
+                    product.setAmount(0);
+                    vBoxBucket.getChildren().remove(product.getVBox());
+                    Bucket.bucketProducts.remove(product.getRemovableProduct());
+                    finishCostField.setText(String.valueOf(Bucket.countBucket()));
+                } else {
+                    product.setAmount(product.getAmount() - 1);
+                    String str = product.getAmount() + " * " + product.getCost() + " = " + product.getAmount() * product.getCost();
+                    product.setLabelBucket(str);
+                    finishCostField.setText(String.valueOf(Bucket.countBucket()));
+                }
             });
             product.getButtonBuy().setOnAction(actionEvent -> {
                 labelLog.setText("");
