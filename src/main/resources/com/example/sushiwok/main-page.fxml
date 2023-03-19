@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="back" prefHeight="389.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sushiwok.MainPageController">
+<AnchorPane fx:id="back" prefHeight="389.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sushiwok.MainPageController">
    <Label layoutX="334.0" layoutY="6.0" text="Корзина" />
-   <ScrollPane layoutX="14.0" layoutY="23.0" prefHeight="366.0" prefWidth="166.0">
+   <ScrollPane layoutX="5.0" layoutY="23.0" prefHeight="366.0" prefWidth="175.0">
       <VBox fx:id="vBoxMenu" prefHeight="458.0" prefWidth="151.0" />
    </ScrollPane>
    <Label layoutX="145.0" layoutY="6.0" text="Меню" />
@@ -17,12 +17,13 @@
       <VBox fx:id="vBoxBucket" prefHeight="439.0" prefWidth="151.0" />
    </ScrollPane>
    <Label layoutX="399.0" layoutY="85.0" text="Итого к оплате" />
-   <TextField fx:id="finishCostField" layoutX="399.0" layoutY="110.0" />
+   <TextField fx:id="finishCostField" editable="false" layoutX="399.0" layoutY="110.0" />
    <Button fx:id="buyButton" layoutX="399.0" layoutY="250.0" mnemonicParsing="false" onAction="#buyButtonOnAction" text="Оплатить" />
    <Label fx:id="labelLog" layoutX="398.0" layoutY="291.0" prefHeight="18.0" prefWidth="150.0" />
-   <Label layoutX="14.0" layoutY="6.0" text="Пользователь:" />
-   <Label fx:id="labelUser" layoutX="109.0" layoutY="6.0" />
+   <Label layoutX="5.0" layoutY="6.0" text="Пользователь:" />
+   <Label fx:id="labelUser" layoutX="85.0" layoutY="6.0" prefHeight="17.0" prefWidth="58.0" />
    <Label layoutX="401.0" layoutY="144.0" text="Данные карты" />
    <TextField fx:id="fieldCardNumber" layoutX="399.0" layoutY="168.0" promptText="Номер" />
    <TextField fx:id="fieldCardPinCode" layoutX="399.0" layoutY="207.0" promptText="Пин-код" />
+   <Button fx:id="buttonBack" layoutX="499.0" layoutY="350.0" mnemonicParsing="false" onAction="#buttonBackOnAction" text="Назад" />
 </AnchorPane>

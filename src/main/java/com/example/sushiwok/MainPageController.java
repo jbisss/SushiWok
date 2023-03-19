@@ -1,12 +1,19 @@
 package com.example.sushiwok;
 
 import com.example.classes.*;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class MainPageController {
 
@@ -19,6 +26,8 @@ public class MainPageController {
     public TextField fieldCardNumber;
     public TextField fieldCardPinCode;
     public AnchorPane back;
+    public Button buttonBack;
+
     public void initialize(){
         BackgroundImage myBI= new BackgroundImage(new Image("bam.jpg",1200,750,false,true),
                 BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
@@ -94,5 +103,27 @@ public class MainPageController {
                 labelLog.setText("Не найдено такой карты в базе!");
             }
         }
+    }
+    private void closeWindow(Button button){
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("hello-view.fxml"));
+        LoaderFxml(loader);
+        Stage stagePrev = (Stage) button.getScene().getWindow();
+        stagePrev.hide();
+    }
+    private void LoaderFxml(FXMLLoader loader) {
+        try {
+            loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Parent root = loader.getRoot();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.setTitle("Меню");
+        stage.show();
+    }
+    public void buttonBackOnAction() {
+        closeWindow(buttonBack);
     }
 }
