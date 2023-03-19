@@ -1,14 +1,19 @@
 package com.example.classes;
 
 public class User {
-    private String login;
-    private String password;
-    private String name;
+    private final String login;
+    private final String password;
+    private final String name;
+    private Card card;
 
     public User(String login, String password, String name) {
         this.login = login;
         this.password = password;
         this.name = name;
+    }
+
+    public Card getCard() {
+        return card;
     }
 
     public String getLogin() {
@@ -21,6 +26,10 @@ public class User {
 
     public String getName() {
         return name;
+    }
+
+    public void setCard(Card card) {
+        this.card = card;
     }
 
     @Override

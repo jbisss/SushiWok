@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="179.0" prefWidth="297.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sushiwok.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="179.0" prefWidth="297.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sushiwok.HelloController">
     <Label layoutX="95.0" layoutY="20.0" text="Вход/регистрация" />
     <Button fx:id="enterButton" layoutX="128.0" layoutY="114.0" mnemonicParsing="false" onAction="#enterButtonOnAction" text="Вход" />
     <Button fx:id="registrButton" layoutX="107.0" layoutY="146.0" mnemonicParsing="false" onAction="#registrButtonOnAction" text="Регистрация" />
@@ -14,6 +14,6 @@
     <TextField fx:id="registrLogin" layoutX="75.0" layoutY="219.0" promptText="Логин" />
     <TextField fx:id="registrPassword" layoutX="75.0" layoutY="257.0" promptText="Пароль" />
     <TextField fx:id="registrName" layoutX="74.0" layoutY="184.0" promptText="Имя" />
-   <Label fx:id="labelLog" layoutX="14.0" layoutY="118.0" prefHeight="17.0" prefWidth="29.0" />
+   <Label fx:id="labelLog" layoutX="14.0" layoutY="118.0" prefHeight="18.0" prefWidth="106.0" />
    <Button fx:id="doneRegistrButton" layoutX="86.0" layoutY="289.0" mnemonicParsing="false" onAction="#doneRegistrButtonOnAction" text="Зарегистрироваться" />
 </AnchorPane>
